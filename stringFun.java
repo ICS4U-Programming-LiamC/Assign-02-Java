@@ -13,6 +13,7 @@ import java.util.Scanner;
 * on top of however many times it was already going to appear.
 *
 * @author  Liam Csiffary
+
 * @version 1.1
 * @since   2022-03-22
 */
@@ -48,7 +49,6 @@ public class stringFun {
 
   // also from https://www.w3schools.com/java/java_files_create.asp
   public static void Writer(String[] arr) {
-
     try {
       // creates file writing object
       FileWriter myWriter = new FileWriter("expandedStrings.txt");
@@ -104,8 +104,7 @@ public class stringFun {
 
   public static void main(String[] args) throws Exception {
     // generates new file and creates the array using the ArrayGenerator
-    File file = new File(
-        "C:/Users/s299776/ICS4U/Assign/Assign-02-Java/testCases.txt");
+    File file = new File(System.getProperty("user.dir") + "/testCases.txt");
 
     // get the string as an array from the file
     String[] testCases = ArrayGenerator(file);
